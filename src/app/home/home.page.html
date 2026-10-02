@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Corporate App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Menú horizontal de navegación -->
+  <ion-segment value="home">
+    <ion-segment-button routerLink="/productos">
+      <ion-label>Productos</ion-label>
+    </ion-segment-button>
+    <ion-segment-button routerLink="/nosotros">
+      <ion-label>Nosotros</ion-label>
+    </ion-segment-button>
+    <ion-segment-button routerLink="/contacto">
+      <ion-label>Contacto</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div class="ion-text-center ion-margin-top" style="margin-top: 40px;">
+    <h2>Bienvenido a Corporate App</h2>
+    <p>Selecciona una opción en el menú superior para navegar a cada módulo.</p>
+  </div>
+</ion-content>

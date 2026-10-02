@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Contacto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card style="margin-top: 10px;">
+    <ion-card-content>
+      <ion-item>
+        <ion-input [(ngModel)]="correo" type="email" label="Correo" labelPlacement="floating" placeholder="tu-correo@ejemplo.com"></ion-input>
+      </ion-item>
+
+      <ion-item style="margin-top: 15px;">
+        <ion-textarea [(ngModel)]="mensaje" label="Mensaje" labelPlacement="floating" placeholder="Escribe aquí tu consulta..." rows="4"></ion-textarea>
+      </ion-item>
+
+      <ion-button expand="block" (click)="enviar()" style="margin-top: 25px;">
+        Enviar Mensaje
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="enviado" color="success" style="margin-top: 20px;">
+    <ion-card-content>
+      ¡Mensaje guardado correctamente en la persistencia local (@capacitor/preferences)!
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="ultimoMensajeGuardado" style="margin-top: 20px;">
+    <ion-card-content>
+      <h3 style="color: var(--ion-color-primary); font-weight: bold; margin-bottom: 10px;">Último mensaje en persistencia:</h3>
+      <p><strong>Correo:</strong> {{ ultimoMensajeGuardado.correo }}</p>
+      <p><strong>Mensaje:</strong> {{ ultimoMensajeGuardado.mensaje }}</p>
+      <p><small style="color: #64748b;">Guardado a las: {{ ultimoMensajeGuardado.fecha }}</small></p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

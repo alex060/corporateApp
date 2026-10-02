@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nombre": "Portátil Dell Inspiron",
+    "unidades": 12,
+    "precio": 1200,
+    "foto": "assets/images/dell.jpg",
+    "vendedor": "Tech Solutions S.L."
+  },
+  {
+    "id": 2,
+    "nombre": "Monitor LG UltraWide",
+    "unidades": 8,
+    "precio": 299,
+    "foto": "assets/images/lg.jpg",
+    "vendedor": "Display Ibérica"
+  },
+  {
+    "id": 3,
+    "nombre": "Teclado Mecánico Pro",
+    "unidades": 25,
+    "precio": 115,
+    "foto": "assets/images/dell.jpg",
+    "vendedor": "Periféricos Madrid"
+  }
+]
